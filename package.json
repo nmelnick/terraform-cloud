@@ -1,5 +1,5 @@
 {
-  "name": "terraform-cloud",
+  "name": "@skorfmann/terraform-cloud",
   "version": "0.0.0-development",
   "description": "Terraform Cloud API wrapper",
   "repository": {
