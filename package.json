@@ -9,6 +9,8 @@
     "type": "git",
     "url": "https://github.com/skorfmann/terraform-cloud.git"
   },
+  "main": "pkg/dist-node/index.js",
+  "types": "pkg/dist-types/index.d.ts",
   "author": "Mijail Rondon <mijail@hey.com>",
   "license": "MIT",
   "scripts": {
