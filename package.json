@@ -2,7 +2,9 @@
   "name": "@skorfmann/terraform-cloud",
   "version": "0.0.0-development",
   "description": "Terraform Cloud API wrapper",
-  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/skorfmann/terraform-cloud.git"
