@@ -4,7 +4,7 @@
   "description": "Terraform Cloud API wrapper",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mijailr/terraform-cloud.git"
+    "url": "https://github.com/skorfmann/terraform-cloud.git"
   },
   "author": "Mijail Rondon <mijail@hey.com>",
   "license": "MIT",
