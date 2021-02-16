@@ -26,4 +26,14 @@ export default class Workspaces extends Request {
     const path = `/organizations/${organizationName}/workspaces/${workspaceId}`
     return this.patch<Workspace, WorkspaceRequest>(path, request)
   }
+
+  delete(workspaceId: string): Promise<void> {
+    const path = `/workspaces/${workspaceId}`
+    return this.delete(path)
+  }
+
+  deleteByName(organizationName: string, workspaceName: string): Promise<void> {
+    const path = `/organizations/${organizationName}/workspaces/${workspaceName}`
+    return this.delete(path)
+  }
 }
