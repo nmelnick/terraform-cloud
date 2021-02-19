@@ -29,11 +29,11 @@ export default class Workspaces extends Request {
 
   delete(workspaceId: string): Promise<void> {
     const path = `/workspaces/${workspaceId}`
-    return this.delete(path)
+    return this.client.delete(path)
   }
 
   deleteByName(organizationName: string, workspaceName: string): Promise<void> {
     const path = `/organizations/${organizationName}/workspaces/${workspaceName}`
-    return this.delete(path)
+    return this.client.delete(path)
   }
 }
