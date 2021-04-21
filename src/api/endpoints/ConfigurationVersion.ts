@@ -15,6 +15,11 @@ export default class ConfigurationVersions extends Request {
     )
   }
 
+  async show(configurationId: string): Promise<ConfigurationVersion> {
+    const path = `/configuration-versions/${configurationId}`
+    return this.get<ConfigurationVersion>(path)
+  }
+
   // eslint-disable-next-line @typescript-eslint/no-explicit-any, @typescript-eslint/explicit-module-boundary-types
   async upload(url: string, data: any): Promise<any> {
     return await axios.put(url, data)
