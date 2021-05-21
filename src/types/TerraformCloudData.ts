@@ -16,7 +16,7 @@ export type Relationship = {
 
 export type TerraformCloudData<Attributes> = Data & {
   attributes: Attributes
-  relationships?: [Relationship]
+  relationships?: Record<string, Relationship>
   links?: Links
 }
 
