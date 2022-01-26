@@ -7,6 +7,7 @@ import Runs from './endpoints/Runs'
 import Workspaces from './endpoints/Workspaces'
 import ConfigurationVersion from './endpoints/ConfigurationVersion'
 import StateVersions from './endpoints/StateVersions'
+import { AxiosInstance } from 'axios'
 
 export class TerraformCloud extends EventEmitter {
   public Account: Account
@@ -16,16 +17,18 @@ export class TerraformCloud extends EventEmitter {
   public Workspaces: Workspaces
   public ConfigurationVersion: ConfigurationVersion
   public StateVersions: StateVersions
+  public client: AxiosInstance
 
   constructor(apiKey: string) {
     super()
-    const client = terraformCloudApiClient(apiKey)
-    this.Account = new Account(client)
-    this.Plans = new Plans(client)
-    this.Runs = new Runs(client)
-    this.Applies = new Applies(client)
-    this.Workspaces = new Workspaces(client)
-    this.ConfigurationVersion = new ConfigurationVersion(client)
-    this.StateVersions = new StateVersions(client)
+    this.client = terraformCloudApiClient(apiKey)
+
+    this.Account = new Account(this.client)
+    this.Plans = new Plans(this.client)
+    this.Runs = new Runs(this.client)
+    this.Applies = new Applies(this.client)
+    this.Workspaces = new Workspaces(this.client)
+    this.ConfigurationVersion = new ConfigurationVersion(this.client)
+    this.StateVersions = new StateVersions(this.client)
   }
 }
