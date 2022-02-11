@@ -7,6 +7,7 @@ import Runs from './endpoints/Runs'
 import Workspaces from './endpoints/Workspaces'
 import ConfigurationVersion from './endpoints/ConfigurationVersion'
 import StateVersions from './endpoints/StateVersions'
+import RemoteStateConsumer from './endpoints/RemoteStateConsumer'
 import { AxiosInstance } from 'axios'
 
 export class TerraformCloud extends EventEmitter {
@@ -17,6 +18,7 @@ export class TerraformCloud extends EventEmitter {
   public Workspaces: Workspaces
   public ConfigurationVersion: ConfigurationVersion
   public StateVersions: StateVersions
+  public RemoteStateConsumer: RemoteStateConsumer
   public client: AxiosInstance
 
   constructor(apiKey: string) {
@@ -30,5 +32,6 @@ export class TerraformCloud extends EventEmitter {
     this.Workspaces = new Workspaces(this.client)
     this.ConfigurationVersion = new ConfigurationVersion(this.client)
     this.StateVersions = new StateVersions(this.client)
+    this.RemoteStateConsumer = new RemoteStateConsumer(this.client)
   }
 }

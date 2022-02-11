@@ -18,6 +18,7 @@ export interface WorkspaceRequestAttributes {
   triggerPrefixes?: []
   workingDirectory?: string
   vcsRepo?: WorkspaceVcsRepoCreate
+  globalRemoteState: boolean
 }
 
 export interface WorkspaceVcsRepoCreate {
