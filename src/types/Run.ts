@@ -14,6 +14,7 @@ export type RunRequest = {
   data: {
     attributes: {
       isDestroy?: boolean
+      refreshOnly?: boolean
       message?: string
       targetAddrs?: string[]
     }
@@ -47,6 +48,7 @@ export interface RunAttributes {
   errorText: null | string
   hasChanges: boolean
   isDestroy: boolean
+  refreshOnly: boolean
   message: string
   source: string
   status:
