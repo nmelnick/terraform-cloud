@@ -21,9 +21,9 @@ export class TerraformCloud extends EventEmitter {
   public RemoteStateConsumer: RemoteStateConsumer
   public client: AxiosInstance
 
-  constructor(apiKey: string) {
+  constructor(apiKey: string, tfeHostname = 'app.terraform.io') {
     super()
-    this.client = terraformCloudApiClient(apiKey)
+    this.client = terraformCloudApiClient(apiKey, tfeHostname)
 
     this.Account = new Account(this.client)
     this.Plans = new Plans(this.client)
