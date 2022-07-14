@@ -35,6 +35,7 @@ export const WorkspaceMock = {
       'vcs-repo': null,
       'working-directory': '',
       'execution-mode': 'agent',
+      tagNames: [],
     },
     relationships: {
       organization: {

@@ -46,6 +46,7 @@ export interface WorkspaceAttributes {
   vcsRepo: null
   workingDirectory: string
   executionMode: 'remote' | 'local' | 'agent'
+  tagNames: string[]
 }
 
 export interface WorkspacePermissions {

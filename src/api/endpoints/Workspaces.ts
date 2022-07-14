@@ -12,6 +12,11 @@ export default class Workspaces extends Request {
     return this.get<Workspace>(path)
   }
 
+  showAll(organizationName: string): Promise<Workspace[]> {
+    const path = `/organizations/${organizationName}/workspaces`
+    return this.get<Workspace[]>(path)
+  }
+
   show(workspaceId: string): Promise<Workspace> {
     const path = `/workspaces/${workspaceId}`
     return this.get<Workspace>(path)
